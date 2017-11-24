@@ -15,17 +15,18 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css')
     .sourceMaps()
     .options({
+    	processCssUrls: true,
         postCss: [
             require('autoprefixer')({
                 browsers: '>5%'
-            }),
-            require('cssnano')({
-                preset: ['default', {
-                    discardComments: {
-                        removeAll: true,
-                    }
-                }]
             })
+            // require('cssnano')({
+            //     preset: ['default', {
+            //         discardComments: {
+            //             removeAll: true
+            //         }
+            //     }]
+            // })
         ]
     })
     .version();

@@ -112,7 +112,7 @@ class blogController extends Controller
     		]
     	];
 
-    	return view('blog.index', [
+    	return view('index', [
     		'contents' => $contents,
     		'categories' => $categories,
     		'popular_posts' => $popular_posts,
